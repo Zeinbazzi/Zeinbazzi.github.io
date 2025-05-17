@@ -6,46 +6,54 @@
   <title>Zein Bazzi | PhD Student in Astronomy</title>
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  
 </head>
 <body>
   <header class="hero">
     <img src="assets/zein-photo.jpeg" alt="Zein Bazzi" class="profile-photo">
     <h1>Zein Bazzi</h1>
     <h2>PhD Student in Astronomy</h2>
-    <h3>Argelander-Institut für Astronomie</h3>
+    <h3>Argelander Institute for Astronomy, University of Bonn</h3>
   </header>
 
   <main class="info-boxes">
-    <div class="box" onclick="showSection('about')">About Me</div>
-    <div class="box" onclick="showSection('research')">Research</div>
-    <div class="box" onclick="showSection('contact')">Contact</div>
-    <div class="box" onclick="showSection('links')">Links</div>
+    <div class="box" onclick="showSection('about')">🧍 About Me</div>
+    <div class="box" onclick="showSection('research')">🔭 Research</div>
+    <div class="box" onclick="showSection('contact')">✉️ Contact</div>
+    <div class="box" onclick="showSection('links')">🔗 Links</div>
   </main>
 
   <section id="about" class="info-section">
     <h2>About Me</h2>
-    <p>I am a PhD candidate at the Argelander Institute for Astronomy at the University of Bonn, with a primary research focus on the properties and evolution of molecular clouds across different types of galaxies. My work aims to better understand how these clouds form, change, and influence star formation in diverse galactic environments. In addition to this, I have a strong interest in active galactic nuclei and how they affect their host galaxies.</p>
+    <p>I am a PhD candidate at the Argelander Institute for Astronomy at the University of Bonn, where I focus on the study of molecular clouds and galactic environments. My research combines observational astronomy, data science, and computational methods to explore the mechanisms driving galaxy evolution and star formation. I'm deeply interested in how scientific discovery can be communicated across disciplines and cultures.</p>
   </section>
-    <section id="research" class="info-section">
+
+  <section id="research" class="info-section">
     <h2>Research</h2>
-    <p></p>
+    <p>My research investigates the life cycle of molecular clouds in a range of galactic contexts, aiming to understand their structure, formation, and influence on star formation. I analyze data from leading space observatories (e.g., ALMA, JWST) and simulate physical processes using computational models. Additional interests include AGN feedback, cosmic dust properties, and the impact of environment on interstellar medium dynamics.</p>
   </section>
+
   <section id="contact" class="info-section">
-    <h2>Contact Me</h2>
-    <p>You can reach me via email at:</p>
-    <p><a href="mailto:zbazzi@uni-bonn.de">zbazzi@uni-bonn.de</a></p>
+    <h2>Contact</h2>
+    <p>Email: <a href="mailto:zbazzi@uni-bonn.de">zbazzi@uni-bonn.de</a></p>
+    <p>Institute: Argelander Institute for Astronomy</p>
+    <p>University of Bonn, Germany</p>
   </section>
+
   <section id="links" class="info-section">
-  <h2>Relevant Links</h2>
-  <ul>
-    <li><a href="https://github.com/Zeinbazzi" target="_blank">GitHub</a></li>
-    <li><a href="https://linkedin.com/in/zeinbazzi" target="_blank">LinkedIn</a></li>
-    <li><a href="https://orcid.org/0009-0001-1221-0975" target="_blank">ORCID</a></li>
-    <li><a href="https://www.researchgate.net/profile/Zein-Bazzi-2" target="_blank">ResearchGate</a></li>
-    <li><a href="https://scholar.google.com/citations?hl=de&user=x4cDN8AAAAAJ" target="_blank">Google Scholar</a></li>
-  </ul>
-</section>
+    <h2>Relevant Links</h2>
+    <ul>
+      <li><a href="https://github.com/Zeinbazzi" target="_blank">GitHub</a></li>
+      <li><a href="https://linkedin.com/in/zeinbazzi" target="_blank">LinkedIn</a></li>
+      <li><a href="https://orcid.org/0009-0001-1221-0975" target="_blank">ORCID</a></li>
+      <li><a href="https://www.researchgate.net/profile/Zein-Bazzi-2" target="_blank">ResearchGate</a></li>
+      <li><a href="https://scholar.google.com/citations?hl=de&user=x4cDN8AAAAAJ" target="_blank">Google Scholar</a></li>
+    </ul>
+  </section>
+
+  <footer class="footer">
+    <p>&copy; 2025 Zein Bazzi | Made with ♥ for the stars</p>
+  </footer>
+
   <script>
     function showSection(id) {
       const sections = document.querySelectorAll('.info-section');
@@ -53,7 +61,6 @@
         section.style.display = (section.id === id) ? 'block' : 'none';
       });
     }
-    // Hide all sections initially
     window.onload = () => {
       document.querySelectorAll('.info-section').forEach(section => {
         section.style.display = 'none';

@@ -71,3 +71,37 @@ body {
     margin-bottom: 2rem;
   }
   
+
+/* Refined link styling */
+a {
+  color: #66ccff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
+  border-bottom: 1px dashed #66ccff;
+}
+
+a:hover {
+  color: #ffffff;
+  border-bottom: 1px solid #ffffff;
+}
+
+/* Additional improvements */
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+ul li {
+  margin-bottom: 0.5rem;
+}
+
+.footer {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #1a1a2f;
+  color: #aaa;
+  font-size: 0.9rem;
+  margin-top: 3rem;
+  border-top: 1px solid #333;
+}
