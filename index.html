@@ -3,72 +3,44 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Zein Bazzi</title>
-  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet" />
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-    body {
-      font-family: 'Montserrat', sans-serif;
-      background: linear-gradient(135deg, #f0f0f0, #ffffff);
-      color: #333;
-      padding: 2rem;
-      line-height: 1.6;
-    }
-    .container {
-      max-width: 800px;
-      margin: auto;
-      text-align: center;
-    }
-    h1 {
-      font-size: 3rem;
-      color: #1a1a1a;
-      margin-bottom: 0.5rem;
-    }
-    h2 {
-      color: #888;
-      font-weight: 400;
-      margin-bottom: 2rem;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-    }
-    .buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 0.8rem 1.5rem;
-      background-color: #0077cc;
-      color: white;
-      text-decoration: none;
-      border-radius: 8px;
-      transition: background-color 0.3s;
-    }
-    .buttons a:hover {
-      background-color: #005fa3;
-    }
-    footer {
-      margin-top: 4rem;
-      color: #aaa;
-    }
-  </style>
+  <title>Zein Bazzi | PhD Student in Astronomy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  
 </head>
 <body>
-  <div class="container">
+  <header class="hero">
+    <img src="assets/zein-photo.jpeg" alt="Zein Bazzi" class="profile-photo">
     <h1>Zein Bazzi</h1>
     <h2>PhD Student in Astronomy</h2>
-    <p>Welcome to my personal website! I'm a doctoral researcher exploring the mysteries of the universe through observational and computational astronomy. My work spans galaxies, stars, and the tools we use to uncover the cosmos.</p>
-    <div class="buttons">
-      <a href="https://github.com/Zeinbazzi" target="_blank">GitHub</a>
-      <a href="https://www.linkedin.com/in/zeinbazzi/" target="_blank">LinkedIn</a>
-      <a href="mailto:zbazzi@astro.uni-bonn.de">Email Me</a>
-    </div>
-    <footer>
-      <p>&copy; 2025 Zein Bazzi. All rights reserved.</p>
-    </footer>
-  </div>
+    <h3>[Insert Institution Here]</h3>
+  </header>
+
+  <main class="info-boxes">
+    <div class="box" onclick="showSection('about')">About Me</div>
+    <div class="box" onclick="showSection('research')">Research</div>
+    <div class="box" onclick="showSection('contact')">Contact</div>
+    <div class="box" onclick="showSection('links')">Links</div>
+  </main>
+
+  <section id="about" class="info-section">[About Me content goes here]</section>
+  <section id="research" class="info-section">[Research description goes here]</section>
+  <section id="contact" class="info-section">[Contact info goes here]</section>
+  <section id="links" class="info-section">[External links go here]</section>
+
+  <script>
+    function showSection(id) {
+      const sections = document.querySelectorAll('.info-section');
+      sections.forEach(section => {
+        section.style.display = (section.id === id) ? 'block' : 'none';
+      });
+    }
+    // Hide all sections initially
+    window.onload = () => {
+      document.querySelectorAll('.info-section').forEach(section => {
+        section.style.display = 'none';
+      });
+    }
+  </script>
 </body>
 </html>
